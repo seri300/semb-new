@@ -1,0 +1,43 @@
+entity User {
+	name String,
+    surname String,
+    mail String
+}
+
+entity Role {
+	roleName String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity House {
+	houseName String
+}
+
+entity Room {
+	roomName String 
+}
+
+entity Technology {
+	title String,
+	description String
+}
+
+
+relationship OneToOne {
+	User{role} to Role
+}
+
+relationship OneToMany {
+	House{room} to Room
+}
+
+relationship OneToMany {
+	User{house} to House
+}
+
+relationship OneToMany {
+	Room{technology} to Technology
+}
+
+service all with serviceImpl
