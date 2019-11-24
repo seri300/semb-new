@@ -25,7 +25,7 @@ entity Technology {
 
 
 relationship OneToOne {
-	User{role} to Role
+	User to Role
 }
 
 relationship OneToMany {
