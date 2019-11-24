@@ -25,7 +25,7 @@ entity Technology {
 
 
 relationship OneToOne {
-	User to Role
+	User{role} to Role
 }
 
 relationship OneToMany {
@@ -41,3 +41,5 @@ relationship OneToMany {
 }
 
 service all with serviceImpl
+dto * with mapstruct
+IllegalAssociationException: Relationships from User entity is not supported in the declaration between User and Role.
